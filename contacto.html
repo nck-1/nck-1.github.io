@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinergia Estudio - Rec, Mix & Master</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/47e1b3f731.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="navItems">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+    <main>
+      <h1>SINERGIA ESTUDIO</h1>
+      <h2>Contactanos</h2>
+      <iframe name="result" src="showData.html" hidden></iframe>
+      <div id="centrado">
+        <div id="contactoMain">
+          <div id="form">
+            <form name="fvalida" action="" target="result">
+              <div id="firstname">
+                <label for="Nombre">Nombre</label><br>
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="Nombre..."
+                /><br /><br />
+              </div>
+
+              <div id="lastname">
+                <label for="Apellido">Apellido</label><br>
+                <input
+                  type="text"
+                  name="apellido"
+                  placeholder="Apellido..."
+                /><br /><br />
+              </div>
+
+              <div id="email">
+                <label for="Email">Email</label><br>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email..."
+                /><br /><br />
+              </div>
+
+              <div id="phone">
+                <label for="Teléfono">Teléfono</label><br>
+                <input
+                  type="phone"
+                  name="phone"
+                  placeholder="Teléfono..."
+                /><br /><br />
+              </div>
+
+              <div id="comments">
+                Comentarios
+                <br />
+                <textarea
+                  name="comentarios"
+
+                  rows="5"
+                  placeholder="Deje sus comentarios..."
+                ></textarea>
+                <br /><br />
+              </div>
+
+              <input id="reset" type="reset" value="Limpiar" /><br /><br />
+
+              <input id="submit" type="button" value="Enviar" onclick="valida_envia()" />
+
+              <br /><br /><br /><br />
+            </form>
+          </div>
+          <span id="mapFrame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d851.2196654201152!2d-64.18417407082427!3d-31.41746899883772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28355cc2a41%3A0x2e2c49ca51366e77!2sSan%20Jer%C3%B3nimo%2066%2C%20X5000AGB%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1653613181054!5m2!1ses-419!2sar"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </span>
+          <span id="datos">
+            <h3>Ubicación</h3>
+            <p>
+              Nos encontramos en el centro de la Ciudad de Córdoba, con rápido y
+              fácil acceso desde las principales zonas de la ciudad.
+            </p>
+            <br />
+            <p>
+              <i class="fa-solid fa-location-dot"> </i> SanJerónimo 66, Córdoba,
+              Argentina.
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 0351-155000000</p>
+            <p><i class="fa-solid fa-at"></i> estudio@sinergia.com</p>
+          </span>
+        </div>
+      </div>
+      <br /><br />
+    </main>
+
+    <footer>
+      <div id="mediaIcons">
+        <a href="http://facebook.com/" target="_blank">
+          <i class="fa-brands fa-facebook-square"></i>
+        </a>
+        <a href="http://instagram.com/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="http://whatsapp.com/" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+      <p>Sinergia Estudio - © 2022</p>
+    </footer>
+    <script src="js/valida.js"></script>
+  </body>
+</html>

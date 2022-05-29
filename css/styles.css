@@ -1,0 +1,792 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(22, 21, 21);
+    background-image: url("/RDA-3.0/img/bg.png");
+    display: grid;
+    grid-template: 50px 1fr 90px / 1fr;
+    grid-template-areas: "nav"
+        "main"
+        "footer";
+    align-content: stretch;
+    box-sizing: border-box;
+    gap: 0.5rem 0;
+}
+
+h1 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 2.5rem;
+}
+
+h2,
+h3,
+label {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#navItems,
+main,
+footer {
+    color: white;
+    border-radius: 7px;
+}
+
+#navItems {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    background-color: rgba(22, 21, 21, 0.85);
+    display: grid;
+    grid-template: auto / auto auto auto;
+    grid-template-areas: "1 2 3";
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0 3rem;
+    text-transform: uppercase;
+}
+
+#navItems a {
+    color: white;
+    padding: 0 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+#navItems a:hover {
+    background: gray;
+}
+
+main {
+    grid-area: main;
+}
+
+#contactoMain {
+    row-gap: 3rem;
+    padding-top: 1rem;
+}
+
+#form {
+    grid-area: form;
+    background-color: rgba(22, 21, 21, 0.85);
+    padding: 2rem 6rem;
+    border-radius: 1rem;
+    width: 50%;
+    justify-self: center;
+    text-align: center;
+
+}
+
+
+
+#form form {
+    /* width: 100%; */
+    display: grid;
+    column-gap: 0.5rem;
+    justify-content: center;
+}
+
+#firstname {
+    grid-area: firstname;
+}
+
+#lastname {
+    grid-area: lastname;
+}
+
+#email {
+    grid-area: email;
+}
+
+#fecha {
+    grid-area: fecha;
+}
+
+#comments {
+    grid-area: comments;
+}
+
+textarea {
+    width: 100%;
+}
+
+#reset {
+    grid-area: reset;
+    width: fit-content;
+    justify-self: center;
+}
+
+#submit {
+    grid-area: submit;
+    width: fit-content;
+    justify-self: center;
+
+}
+
+#mapFrame {
+    grid-area: mapFrame;
+    border-radius: 1rem;
+    height: 300px;
+}
+
+#mapFrame iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+
+}
+
+#datos {
+    grid-area: datos;
+    background-color: rgba(22, 21, 21, 0.85);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#mainImg {
+    margin: 2rem 0 0 0;
+    border-radius: 1rem;
+    display: grid;
+    grid-template: auto /auto;
+    grid-template-areas: "img";
+}
+
+#mainImg>img {
+    width: 80vw;
+    max-width: 1280px;
+    border-radius: 1rem;
+    grid-area: img;
+    justify-self: center;
+}
+
+main>p {
+    padding: 0 8vw 0rem 8vw;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+main>h1,
+h2 {
+    padding: 0 0;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+#servicios {
+    margin: 0 2rem;
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    column-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* #serviciosDetalle {
+    padding: 0 2rem;
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr 2fr;
+    grid-template-areas: "imgS serv"
+        "imgS serv"
+        "imgS serv"
+        "imgS serv";
+    row-gap: 1rem
+} */
+
+#servicios div {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    border-radius: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+#servicios p {
+    padding: 0 1rem 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+#servicios h1 {
+    font-size: 3rem;
+}
+
+#serv1,
+#serv2,
+#serv3,
+#serv4 {
+    padding: 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1rem;
+    width: auto;
+}
+
+/* #imgServ{
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template: auto /auto; 
+} */
+
+#imgServ1 {
+    grid-area: imgS1;
+}
+
+#imgServ2 {
+    grid-area: imgS2;
+}
+
+#imgServ3 {
+    grid-area: imgS3;
+}
+
+#imgServ4 {
+    grid-area: imgS4;
+}
+
+#imgServ1>img,
+#imgServ2>img,
+#imgServ3>img,
+#imgServ4>img {
+    border-radius: 1rem;
+    grid-area: img;
+    justify-self: center;
+}
+
+
+
+#iconServ {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+    /* transform: rotateY(300deg); */
+    /* transform: rotateY(120deg); */
+    animation: girarS 5s linear 0.5s infinite normal backwards running;
+}
+
+@keyframes girarS {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#servicios i {
+    animation: girarI 5s linear 0.5s infinite normal backwards running;
+}
+
+@keyframes girarI {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#servicios i:hover {
+    font-size: 4rem;
+}
+
+#servicios a {
+    color: white;
+}
+
+#serv1 h3,
+#serv2 h3,
+#serv3 h3,
+#serv4 h3 {
+    text-align: center;
+}
+
+#serv1 p,
+#serv2 p,
+#serv3 p,
+#serv4 p {
+    text-align: center;
+    padding: 0 2rem 0.5rem 2rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgba(22, 21, 21, 0.85);
+}
+
+footer p {
+    text-align: center;
+}
+
+#mediaIcons {
+    display: grid;
+    padding: 0;
+    grid-template: 2rem / auto auto auto;
+    font-size: 1.25rem;
+    text-align: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+#mediaIcons a {
+    padding: 0 0.2rem;
+    color: white;
+    text-decoration: none;
+    align-self: end;
+}
+
+#mediaIcons a:hover {
+    font-size: 1.6rem;
+}
+
+#ph1 {
+    grid-area: ph1;
+    border-radius: 1rem;
+    justify-self: center;
+    width: 100%;
+}
+
+#photos img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#ph2 {
+    grid-area: ph2;
+    border-radius: 1rem;
+    justify-self: center;
+    width: 100%;
+}
+
+#ph3 {
+    grid-area: ph3;
+    border-radius: 1rem;
+    justify-self: center;
+    width: 100%;
+}
+
+#ph4 {
+    grid-area: ph4;
+    border-radius: 1rem;
+    justify-self: center;
+    width: 100%;
+}
+
+#ph5 {
+    grid-area: ph5;
+    border-radius: 1rem;
+    justify-self: center;
+    width: 100%;
+}
+
+#ph6 {
+    grid-area: ph6;
+    border-radius: 1rem;
+    justify-self: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    #navItems {
+        position: static;
+    }
+
+    #servicios {
+        grid-template: repeat(4, auto) / 1fr;
+        box-sizing: content-box;
+        gap: 1rem
+    }
+
+    #serviciosDetalle {
+        grid-template: repeat(8, auto) / auto;
+        grid-template-areas: "imgS1"
+            "serv1"
+            "imgS2"
+            "serv2"
+            "imgS3"
+            "serv3"
+            "imgS4"
+            "serv4";
+        row-gap: 0.5rem
+    }
+
+    #photos {
+        padding: 2rem;
+        display: grid;
+        grid-template: repeat(3, auto) / 1fr 1fr;
+        grid-template-areas: "ph1 ph2"
+            "ph3 ph4"
+            "ph5 ph6";
+        box-sizing: content-box;
+
+        gap: 1rem;
+
+    }
+
+    #imgServ1,
+    #imgServ2,
+    #imgServ3,
+    #imgServ4 {
+        margin-top: 2rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template: auto /auto;
+    }
+
+    #imgServ1>img,
+    #imgServ2>img,
+    #imgServ3>img,
+    #imgServ4>img {
+        width: 90%;
+        max-width: 480px;
+    }
+
+    #contactoMain {
+        display: grid;
+        grid-template: auto auto auto / 1fr;
+        grid-template-areas: "form"
+            "datos"
+            "mapFrame";
+    }
+
+    #form {
+        width: 70%;
+    }
+
+    #form form {
+        grid-template: repeat(4, auto) / auto auto;
+        grid-template-areas: "firstname lastname"
+            "email fecha"
+            "comments comments"
+            "reset submit"
+        ;
+    }
+
+    #form {
+        width: 70%;
+        padding: 2rem 4rem;
+    }
+
+    #form form {
+        grid-template: repeat(7, auto) / 1fr;
+        grid-template-areas: "firstname"
+            "lastname"
+            "email"
+            "fecha"
+            "comments"
+            "comments"
+            "reset"
+            "submit"
+        ;
+        row-gap: 0.5rem;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    #navItems {
+        position: static;
+    }
+
+    #servicios {
+        grid-template: auto auto / 1fr 1fr;
+        gap: 1rem
+    }
+
+    #serviciosDetalle {
+        grid-template: repeat(8, auto) / auto;
+        grid-template-areas: "imgS1"
+            "serv1"
+            "imgS2"
+            "serv2"
+            "imgS3"
+            "serv3"
+            "imgS4"
+            "serv4";
+        row-gap: 0.5rem
+    }
+
+    #photos {
+        padding: 2rem 2rem;
+        
+        display: grid;
+        grid-template: repeat(2, auto) / 1fr 1fr 1fr;
+        grid-template-areas: "ph1 ph2 ph3"
+            "ph4 ph5 ph6";
+        box-sizing: content-box;
+
+        gap: 1rem;
+
+    }
+
+    #imgServ1,
+    #imgServ2,
+    #imgServ3,
+    #imgServ4 {
+        margin-top: 2rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template: auto /auto;
+    }
+
+    #imgServ1>img,
+    #imgServ2>img,
+    #imgServ3>img,
+    #imgServ4>img {
+        width: 80%;
+        max-width: 720px;
+    }
+
+    #contactoMain {
+        display: grid;
+        grid-template: auto auto auto / 1fr;
+        grid-template-areas: "form"
+            "datos"
+            "mapFrame";
+    }
+
+    #form {
+        width: 70%;
+        padding: 2rem 4rem;
+    }
+
+    #form form {
+        grid-template: repeat(7, auto) / 1fr;
+        grid-template-areas: "firstname"
+            "lastname"
+            "email"
+            "fecha"
+            "comments"
+            "comments"
+            "reset"
+            "submit"
+        ;
+        row-gap: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1280px) {
+    #servicios {
+        gap: 1rem
+    }
+}
+
+#photos {
+    padding: 2rem;
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr 1fr;
+    grid-template-areas: "ph1 ph2"
+        "ph3 ph4"
+        "ph5 ph6";
+    box-sizing: content-box;
+
+    gap: 1rem;
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 960px) {
+    #serviciosDetalle {
+        grid-template: repeat(8, auto) / auto;
+        grid-template-areas: "imgS1"
+            "serv1"
+            "imgS2"
+            "serv2"
+            "imgS3"
+            "serv3"
+            "imgS4"
+            "serv4";
+        row-gap: 0.5rem
+    }
+
+    #imgServ1,
+    #imgServ2,
+    #imgServ3,
+    #imgServ4 {
+        margin-top: 2rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template: auto /auto;
+    }
+
+    #imgServ1>img,
+    #imgServ2>img,
+    #imgServ3>img,
+    #imgServ4>img {
+        width: 60%;
+        max-width: 960px;
+    }
+
+    #contactoMain {
+        display: grid;
+        grid-template: auto auto / 1fr 1fr;
+        grid-template-areas: "form form"
+            "mapFrame datos";
+    }
+
+    #form {
+        width: 70%;
+    }
+
+    #form form {
+        grid-template: repeat(4, auto) /auto auto;
+        grid-template-areas: "firstname lastname"
+            "email fecha"
+            "comments comments"
+            "reset submit"
+        ;
+    }
+
+}
+
+@media screen and (min-width: 960px) and (max-width:1280px) {
+
+    #serviciosDetalle {
+        padding: 0 2rem;
+        display: grid;
+        grid-template: repeat(4, auto) / 1fr 1fr;
+        grid-template-areas: "imgS1 serv1"
+            "serv2 imgS2"
+            "imgS3 serv3"
+            "serv4 imgS4";
+        row-gap: 3rem;
+        column-gap: 0;
+    }
+
+
+    #imgServ1,
+    #imgServ2,
+    #imgServ3,
+    #imgServ4 {
+        margin-top: 0rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template: auto /auto;
+    }
+
+    #imgServ1>img,
+    #imgServ2>img,
+    #imgServ3>img,
+    #imgServ4>img {
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    #contactoMain {
+        display: grid;
+        grid-template: auto auto / 1fr 1fr;
+        grid-template-areas: "form form"
+            "mapFrame datos";
+
+    }
+
+    #form form {
+        grid-template: repeat(4, auto) / 1fr 1fr;
+        grid-template-areas: "firstname lastname"
+            "email fecha"
+            "comments comments"
+            "reset submit"
+        ;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #centrado {
+        
+        display: grid;
+        grid-template: auto /1fr;
+        grid-template-areas: "servicios";
+        justify-content: center;
+    }
+
+    #servicios {
+
+        grid-area: servicios;
+        justify-self: center;
+        width: 1200px;
+        margin: 0 2rem;
+        display: grid;
+        grid-template: auto / repeat(4, 1fr);
+        column-gap: 2rem
+    }
+    #centrado2 {
+       
+        display: grid;
+        grid-template: auto /1fr;
+        grid-template-areas: "photos";
+        justify-content: center;
+    }
+
+    #photos {
+        grid-area: photos;
+        justify-self: center;
+        padding: 2rem 6rem;
+        max-width: 1200px;
+        display: grid;
+        grid-template: repeat(2, auto) / 1fr 1fr 1fr;
+        grid-template-areas: "ph1 ph2 ph3"
+            "ph4 ph5 ph6";
+        box-sizing: content-box;
+
+        gap: 1rem;
+
+    }
+
+    #serviciosDetalle {
+        grid-area: servicios;
+        justify-self: center;
+        padding: 0 2rem;
+        width: 1200px;
+        display: grid;
+        grid-template: repeat(4, auto) / 1fr 1fr;
+        grid-template-areas: "imgS1 serv1"
+            "serv2 imgS2"
+            "imgS3 serv3"
+            "serv4 imgS4";
+        gap: 4rem 0
+    }
+
+
+    #imgServ1,
+    #imgServ2,
+    #imgServ3,
+    #imgServ4 {
+        margin-top: 0rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template: auto /auto;
+    }
+
+    #imgServ1>img,
+    #imgServ2>img,
+    #imgServ3>img,
+    #imgServ4>img {
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    #contactoMain {
+        grid-area: servicios;
+        justify-self: center;
+        display: grid;
+        grid-template: auto auto / 1fr 1fr;
+        grid-template-areas: "form form"
+            "mapFrame datos";
+        width: 1200px;
+    }
+
+    #form form {
+        grid-template: repeat(4, auto) / 1fr 1fr;
+        grid-template-areas: "firstname lastname"
+            "email fecha"
+            "comments comments"
+            "reset submit"
+        ;
+    }
+
+}
